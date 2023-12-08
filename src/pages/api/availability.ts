@@ -18,7 +18,7 @@ const checkAvailability = async (duration: number, startTime: Date, data: any[] 
 
   for (let i = 0; i < duration; i++) {
     const time = new Date(startTime);
-    time.setDate(time.getDate() + i);
+    time.setDate(time.getDate() + i + 1);
 
     const formattedTime = formatDateTimeForPostgres(time);
 
