@@ -22,6 +22,8 @@ const checkAvailability = async (duration: number, startTime: Date, data: any[] 
 
     const formattedTime = formatDateTimeForPostgres(time);
 
+    console.log(formattedTime)
+
     const availabilityRecord = data?.find((record) => record.tanggal_ketersediaan === formattedTime);
 
     if (availabilityRecord) {

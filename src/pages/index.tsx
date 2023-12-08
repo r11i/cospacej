@@ -69,6 +69,7 @@ export default function Home() {
   }, []);
 
   const handleOrder = async () => {
+    console.log(startTime);
     const { data: { user } } = await supabase.auth.getUser();
     const user_email = user?.email
     const user_id = user?.id
